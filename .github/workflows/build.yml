@@ -6,7 +6,7 @@ on:
   push:
     branches: "**"
   # pull requests are broken when pushing to ghcr
-  # pull_request:
+  pull_request:
     branches: "**"
 jobs:
   build:
