@@ -6,9 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:rabbit": "kubectl port-forward -n tilloo-services service/rabbitmq-service 5672",
-    "start:mongodb": "kubectl port-forward -n tilloo-services service/mongodb-service 27017",
-    "start:client": "vite preview web/client --port 4173",
+    "start:client": "cd web/client && npm run preview",
     "start:server": "PORT=8080 node ./web/server/index.js",
     "start:scheduler": "kubectl port-forward -n tilloo-services service/scheduler-service 8081:80",
     "start": "concurrently -c \"auto\" \"npm:start:*\""
